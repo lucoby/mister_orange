@@ -57,6 +57,10 @@
 		alive.id = "id";
 		alive.className = "class";
 		alive.src = "Alive.png"; // image.src = "IMAGE URL/PATH"
+		var dead = document.createElement("img");
+		dead.id = "id";
+		dead.className = "class";
+		dead.src = "Dead.png"; // image.src = "IMAGE URL/PATH"
 		var aliveButton = document.createElement("button");
 		aliveButton.className = "buttonStyle";
 		aliveButton.textContent = "Click Me!";
@@ -88,6 +92,12 @@
 		
 		function killOrange() {
 			mainText.textContent = "You killed Mr. Orange!";
+			br = document.createElement("br")
+			mainText.appendChild(br);
+			mainText.appendChild(dead);
+			br = document.createElement("br")
+			mainText.appendChild(br)
+			mainText.appendChild(aliveButton);
 		}
 	</script>
 
