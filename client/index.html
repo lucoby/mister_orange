@@ -4,7 +4,8 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Hello...</title>
+	<title>Hello... Mr. Orange</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style type="text/css">
 		#mainContent {
 			font-family: Arial, Helvetica, sans-serif;
@@ -81,15 +82,15 @@
 			mainText.appendChild(br)
 			mainText.appendChild(aliveButton);
 			startButton.remove();
-			var timeout = 2000;
+			var timeout = 1000;
 			timeoutReset = setTimeout(killOrange, timeout);
 			aliveButton.addEventListener('click', aliveMrOrange, false);
 		}
 		
 		function aliveMrOrange() {
 			clearTimeout(timeoutReset)
-			var timeout = 2000;
-			setTimeout(killOrange, timeout);
+			var timeout = 1000;
+			timeoutReset = setTimeout(killOrange, timeout);
 		}
 		
 		function killOrange() {
@@ -99,7 +100,7 @@
 			mainText.appendChild(dead);
 			br = document.createElement("br")
 			mainText.appendChild(br)
-			mainText.appendChild(aliveButton);
+			mainText.appendChild(resetButton);
 		}
 	</script>
 
