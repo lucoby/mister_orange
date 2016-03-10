@@ -60,12 +60,14 @@
 		var aliveButton = document.createElement("button");
 		aliveButton.className = "buttonStyle";
 		aliveButton.textContent = "Click Me!";
+		var resetButton = document.createElement("button");
+		resetButton.className = "buttonStyle";
+		resetButton.textContent = "Try Again!";
 
 
-
-		startButton.addEventListener('click', doSomething, false);
-
-		function doSomething() {
+		startButton.addEventListener('click', startMrOrange, false);
+		
+		function startMrOrange() {
 			mainText.textContent = "Click to keep Mr. Orange alive!";
 			br = document.createElement("br")
 			mainText.appendChild(br);
@@ -74,6 +76,13 @@
 			mainText.appendChild(br)
 			mainText.appendChild(aliveButton);
 			startButton.remove();
+			var timeout = 2000;
+			setTimeout(myFunction, 3000)
+			aliveButton.addEventListener('click', aliveMrOrange, false);
+		}
+		
+		function aliveMrOrange() {
+			
 		}
 	</script>
 
