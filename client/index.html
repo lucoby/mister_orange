@@ -45,28 +45,35 @@
 
 <body>
 	<div id="mainContent">
-		<p id="helloText">How many fucks do I give?</p>
+		<p id="mainText">Help keep Mr. Orange alive?</p>
 		<!--<img src=""></img>-->
-		<button id="clickButton" class="buttonStyle">click me</button>
+		<button id="startButton" class="buttonStyle">Click Here!</button>
 	</div>
 	<script>
-		var myButton = document.getElementById("clickButton");
-		var myText = document.getElementById("helloText");
-		var br = document.createElement("br");
-		var image = document.createElement("img");
-		image.id = "id";
-		image.className = "class";
-		image.src = "idgab.gif"; // image.src = "IMAGE URL/PATH"
+		var startButton = document.getElementById("startButton");
+		var mainText = document.getElementById("mainText");
+		var br;
+		var alive = document.createElement("img");
+		alive.id = "id";
+		alive.className = "class";
+		alive.src = "Alive.png"; // image.src = "IMAGE URL/PATH"
+		var aliveButton = document.createElement("button");
+		aliveButton.className = "buttonStyle";
+		aliveButton.textContent = "Click Me!";
 
 
 
-		myButton.addEventListener('click', doSomething, false)
+		startButton.addEventListener('click', doSomething, false);
 
 		function doSomething() {
-			myText.textContent = "0!";
-			myText.appendChild(br);
-			myText.appendChild(image);
-			myButton.remove();
+			mainText.textContent = "Click to keep Mr. Orange alive!";
+			br = document.createElement("br")
+			mainText.appendChild(br);
+			mainText.appendChild(alive);
+			br = document.createElement("br")
+			mainText.appendChild(br)
+			mainText.appendChild(aliveButton);
+			startButton.remove();
 		}
 	</script>
 
