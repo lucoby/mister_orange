@@ -77,12 +77,17 @@
 			mainText.appendChild(aliveButton);
 			startButton.remove();
 			var timeout = 2000;
-			setTimeout(myFunction, 3000)
+			setTimeout(killOrange, timeout);
 			aliveButton.addEventListener('click', aliveMrOrange, false);
 		}
 		
 		function aliveMrOrange() {
-			
+			var timeout = 2000;
+			setTimeout(killOrange, timeout);
+		}
+		
+		function killOrange() {
+			mainText.textContent = "You killed Mr. Orange!";
 		}
 	</script>
 
