@@ -67,6 +67,7 @@
 		var resetButton = document.createElement("button");
 		resetButton.className = "buttonStyle";
 		resetButton.textContent = "Try Again!";
+		var timeoutReset;
 
 
 		startButton.addEventListener('click', startMrOrange, false);
@@ -81,11 +82,12 @@
 			mainText.appendChild(aliveButton);
 			startButton.remove();
 			var timeout = 2000;
-			setTimeout(killOrange, timeout);
+			timeoutReset = setTimeout(killOrange, timeout);
 			aliveButton.addEventListener('click', aliveMrOrange, false);
 		}
 		
 		function aliveMrOrange() {
+			clearTimeout(timeoutReset)
 			var timeout = 2000;
 			setTimeout(killOrange, timeout);
 		}
