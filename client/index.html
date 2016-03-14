@@ -7,14 +7,22 @@
 	<title>Hello... Mr. Orange</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style type="text/css">
+	
+		html, body { 
+			 height: 100%; 
+			 margin: 0;
+		}
+		
 		#mainContent {
-			font-family: Arial, Helvetica, sans-serif;
+			font-family: Helvetica, Arial, sans-serif;
 			font-size: xx-large;
 			font-weight: bold;
 			background-color: #E3F0FB;
 			border-radius: 4px;
 			padding: 10px;
 			text-align: center;
+			min-height: 100%; 
+			padding-bottom: -3em;
 		}
 		
 		.buttonStyle {
@@ -41,15 +49,35 @@
 			color: #669900;
 			cursor: pointer;
 		}
+		
+		#footer {
+			position: relative; 
+			z-index: 10; 
+			height: 6em; 
+			margin-top: -6em;
+			font-family: Helvetica, Arial, sans-serif;
+			left: 0px;
+			bottom: 0px;
+			height: 90px;
+			width: 100%;
+			color: #996633;
+			background-color: #FCF9D6;
+			text-align: center;
+		}
 	</style>
 </head>
 
 <body>
-	<div id="mainContent">
-		<p id="mainText">Help keep Mr. Orange alive?</p>
-		<!--<img src=""></img>-->
-		<button id="startButton" class="buttonStyle">Click Here!</button>
+		<div id="mainContent">
+			<p id="mainText">Help keep Mr. Orange alive?</p>
+			<!--<img src=""></img>-->
+			<button id="startButton" class="buttonStyle">Click Here!</button>
+		</div>
+	<div id="footer">
+	  <p>Idea by: Deanna Gherle</p>
+	  <p>Created by: Coby Lu</p>
 	</div>
+	
 	<script>
 		var startButton = document.getElementById("startButton");
 		var mainText = document.getElementById("mainText");
@@ -107,5 +135,6 @@
 	</script>
 
 </body>
+
 
 </html>
