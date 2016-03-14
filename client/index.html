@@ -90,9 +90,11 @@
 		dead.id = "id";
 		dead.className = "class";
 		dead.src = "Dead.png"; // image.src = "IMAGE URL/PATH"
-		var aliveButton = document.createElement("button");
-		aliveButton.className = "buttonStyle";
-		aliveButton.textContent = "Click Me!";
+		var aliveButton = document.createElement("input");
+		aliveButton.type = "image";
+		aliveButton.src =  "Alive.png";
+		// aliveButton.className = "buttonStyle";
+		// aliveButton.textContent = "Click Me!";
 		var resetButton = document.createElement("button");
 		resetButton.className = "buttonStyle";
 		resetButton.textContent = "Try Again!";
@@ -105,9 +107,9 @@
 			mainText.textContent = "Click to keep Mr. Orange alive!";
 			br = document.createElement("br")
 			mainText.appendChild(br);
-			mainText.appendChild(alive);
-			br = document.createElement("br")
-			mainText.appendChild(br)
+			// mainText.appendChild(alive);
+			// br = document.createElement("br")
+			// mainText.appendChild(br)
 			mainText.appendChild(aliveButton);
 			startButton.remove();
 			var timeout = 1000;
